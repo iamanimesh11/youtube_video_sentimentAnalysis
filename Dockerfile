@@ -61,4 +61,4 @@ RUN pip install --no-cache-dir -r /app/requirements.txt
 EXPOSE 8501
 
 # Set the command to run your Streamlit app
-CMD ["streamlit", "run", "your_streamlit_app.py"]
+CMD ["streamlit", "run", "ty.py"]
