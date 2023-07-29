@@ -10,10 +10,10 @@ from bs4 import BeautifulSoup
 
 def scrape_comments(url):
     edge_driver_path = 'msedgedriver.exe'
-    options = Options()
+    options = webdriver.EdgeOptions()
     options.headless = True
     options.add_argument("--mute-audio")
-    service = Service(executable_path=edge_driver_path)
+    service = Service(executable_path=EdgeDriverManager().install())
 
     driver = webdriver.Edge(service=service, options=options)
     driver.get(url)
