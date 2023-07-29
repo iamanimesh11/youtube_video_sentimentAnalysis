@@ -6,6 +6,8 @@ import time
 # from selenium.webdriver.edge.options import Options
 # from webdriver_manager.microsoft import EdgeChromiumDriverManager
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
+
 from webdriver_manager.chrome import ChromeDriverManager
 
 options = Options()
