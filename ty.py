@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 import time
 from selenium.webdriver.edge.service import Service
 from selenium.webdriver.edge.options import Options
-from webdriver_manager.microsoft import EdgeDriverManager
+from webdriver_manager.chrome import ChromeDriverManager
 
 from bs4 import BeautifulSoup
 
@@ -15,7 +15,7 @@ def scrape_comments(url):
     options.add_argument("--mute-audio")
     service = Service(executable_path=EdgeDriverManager().install())
 
-    driver = webdriver.Edge(service=service, options=options)
+    driver = webdriver.Chrome(executable_path=ChromeDriverManager().install(), options=options)
     driver.get(url)
 
     time.sleep(5)
