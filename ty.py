@@ -20,8 +20,14 @@ def scrape_comments(url):
     # options.add_argument("--mute-audio")
     options = Options()
     # service = Service(executable_path= edge_driver_path)
-    os.environ["PATH"] += f":{ChromeDriverManager().install()}"
-    driver = webdriver.Chrome(options=options)
+     chromedriver_path = os.path.join(os.path.dirname(__file__), "chromedriver")
+
+    options.binary_location = "chromedriver.exe"  # Replace this with the path to your Chrome binary if needed
+
+    # You can set additional options for Chrome WebDriver if needed
+    # options.headless = True
+
+    driver = webdriver.Chrome(executable_path=chromedriver_path, options=options)
 
     # driver = webdriver.Chrome(ChromeDriverManager().install())
     driver.get(url)
