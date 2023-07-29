@@ -15,7 +15,7 @@ def scrape_comments(url):
     options.add_argument("--mute-audio")
     service = Service(executable_path=EdgeChromiumDriverManager().install())
 
-    driver = webdriver.Edge(service=service, options=options)
+    driver = webdriver.Edge(EdgeChromiumDriverManager().install(), options=options)
     driver.get(url)
 
     time.sleep(5)
