@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 import time
 from selenium.webdriver.edge.service import Service
 from selenium.webdriver.edge.options import Options
-from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.chrome import EdgedriverManager
 
 from bs4 import BeautifulSoup
 
