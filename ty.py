@@ -13,8 +13,8 @@ from bs4 import BeautifulSoup
 def scrape_comments(url):
     # edge_driver_path = EdgeChromiumDriverManager().install()
     # options = webdriver.EdgeOptions()
-    options.headless = True
-    options.add_argument("--mute-audio")
+    # options.headless = True
+    # options.add_argument("--mute-audio")
     # service = Service(executable_path= edge_driver_path)
 
     driver = webdriver.Chrome(ChromeDriverManager().install())
