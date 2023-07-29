@@ -2,9 +2,14 @@ import streamlit as st
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
-from selenium.webdriver.edge.service import Service
-from selenium.webdriver.edge.options import Options
-from webdriver_manager.microsoft import EdgeChromiumDriverManager
+# from selenium.webdriver.edge.service import Service
+# from selenium.webdriver.edge.options import Options
+# from webdriver_manager.microsoft import EdgeChromiumDriverManager
+from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
+
+options = Options()
+
 
 
 from bs4 import BeautifulSoup
@@ -15,7 +20,7 @@ def scrape_comments(url):
     # options.headless = True
     # options.add_argument("--mute-audio")
     # service = Service(executable_path= edge_driver_path)
-    driver = webdriver.Edge()
+    driver = webdriver.Chrome(executable_path=ChromeDriverManager().install(), options=options)
 
     # driver = webdriver.Chrome(ChromeDriverManager().install())
     driver.get(url)
