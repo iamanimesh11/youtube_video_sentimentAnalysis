@@ -9,11 +9,11 @@ from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup
 
 def scrape_comments(url):
-    edge_driver_path = 'edgedriver_win64/msedgedriver.exe'
+    edge_driver_path = 'msedgedriver.exe'
     options = Options()
     options.headless = True
     options.add_argument("--mute-audio")
-    service = Service(executable_path=ChromeDriverManager().install())
+    service = Service(executable_path=edge_driver_path)
 
     driver = webdriver.Chrome(service=service, options=options)
     driver.get(url)
