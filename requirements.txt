@@ -1,5 +1,4 @@
 selenium
 beautifulsoup4
 webdriver_manager
-[platform_system_packages]
-libglib2.0-0 libnss3 libgconf-2-4 libfontconfig1
+sudo apt-get install -y chromium-browser
