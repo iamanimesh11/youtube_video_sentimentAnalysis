@@ -1,4 +1,4 @@
 selenium
 beautifulsoup4
 webdriver_manager
-sudo apt-get install -y chromium-browser
+
