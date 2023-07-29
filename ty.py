@@ -9,7 +9,7 @@ from webdriver_manager.microsoft import EdgeChromiumDriverManager
 from bs4 import BeautifulSoup
 
 def scrape_comments(url):
-    edge_driver_path = 'msedgedriver.exe'
+    edge_driver_path = EdgeChromiumDriverManager().install()
     options = webdriver.EdgeOptions()
     options.headless = True
     options.add_argument("--mute-audio")
