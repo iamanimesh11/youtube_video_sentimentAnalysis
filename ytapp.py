@@ -9,6 +9,8 @@ import matplotlib.pyplot as plt
 from dateutil.parser import parse
 import time
 import nltk
+nltk.download('stopwords')
+
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
 from wordcloud import WordCloud
