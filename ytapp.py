@@ -13,6 +13,28 @@ from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
 from wordcloud import WordCloud
 
+st.set_page_config(page_title='Youtube sentiment Analysis', layout='wide',page_icon="https://icons8.com/icon/szxM3fi4e37N/youtube")
+
+hide_github_icon_js = """
+<style>
+#MainMenu {
+    display: none;
+}
+button.css-ch5dnh {
+    display: none;
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const toolbar = document.querySelector('[data-testid="stToolbar"]');
+    if (toolbar) {
+        toolbar.style.display = 'none';
+    }
+});
+</script>
+"""
+st.markdown(hide_github_icon_js, unsafe_allow_html=True)
+
 
 nltk.download('wordnet')
 nltk.download('omw-1.4')
