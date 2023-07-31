@@ -144,7 +144,7 @@ def get_video_comments_with_info(youtube, desired_comments ,**kwargs):
 import time
 def main():
     colIm,coltit = st.columns([1,3])
-    colIm.image("3721679-youtube_108064.png",width=200)
+    colIm.image("3721679-youtube_108064.png",width=160)
     coltit.title("YouTube Video Sentiments Analysis")
     st.sidebar.title("About this webApp")
     st.sidebar.write("The YouTube Video Sentiments Analysis web app allows users to analyze the sentiment distribution of comments on a given YouTube video. By entering the video link and selecting the percentage of comments to analyze. It performs sentiment analysis to categorize comments as positive, negative, or neutral. The app perform sentiment analysis,engagement analysis and offers time analysis for viewer engagement.  it provides valuable insights for content creators and marketers.")
