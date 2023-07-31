@@ -50,7 +50,7 @@ sentiment = pickle.load(open("sia.pkl",'rb'))
 def extract_video_id(youtube_link):
     if "youtu.be/" in youtube_link:
         # Case 1: https://youtu.be/URyiCGZNjdI
-        video_id = youtube_link.split("/")[-1]
+        video_id = youtube_link.split("/")[-1].split("?")[0]
     elif "youtube.com/watch?v=" in youtube_link:
         # Case 2: https://www.youtube.com/watch?v=URyiCGZNjdI&ab_channel=melodysheep
         video_id = youtube_link.split("?v=")[1].split("&")[0]
