@@ -15,7 +15,7 @@ from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
 from wordcloud import WordCloud
 
-st.set_page_config(page_title='Youtube sentiment Analysis', layout='wide',page_icon="https://icons8.com/icon/szxM3fi4e37N/youtube")
+st.set_page_config(page_title='Youtube sentiment Analysis', layout='wide',page_icon=":yt:")
 
 hide_github_icon_js = """
 <style>
